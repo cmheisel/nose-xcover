@@ -16,7 +16,7 @@ import sys
 from nose.plugins.base import Plugin
 from nose.util import src, tolist
 
-log =  logging.getLogger(__name__)
+log =  logging.getLogger('nose.plugins.xcover')
 
 COVERAGE_TEMPLATE = '''<html>
 <head>
@@ -112,8 +112,6 @@ class XCoverage(Plugin):
         except KeyError:
             pass
         Plugin.configure(self, options, config)
-        if config.worker:
-            return
         if self.enabled:
             try:
                 import coverage
