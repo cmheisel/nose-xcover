@@ -10,8 +10,7 @@ log = logging.getLogger('nose.plugins.xcover')
 
 class XCoverage(cover.Coverage):
     """
-    Activate a coverage report using Ned Batchelder's coverage module.
-    Able to output Cobertura-style coverage reports.
+    Add Cobertura-style XML coverage reports to the built-in nose.plugins.cover plugin.
     """
 
     def options(self, parser, env):

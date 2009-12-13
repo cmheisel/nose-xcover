@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='nosexcover',
-    version='0.1',
-    description='Fork of nose.plugins.cover that can output Cobertura-style XML reports',
+    version='1.0',
+    description='Extends nose.plugins.cover to add Cobertura-style XML reports',
     long_description=open('README').read(),
     author='Chris Heisel',
     author_email='chris@heisel.org',
