@@ -1,3 +1,6 @@
 .coverage
 *.pyc
 nosexcover.egg-info
+coverage.xml
+nosetests.xml
+ve
