@@ -5,7 +5,7 @@ setup(
     name='nosexcover',
     version='1.0',
     description='Extends nose.plugins.cover to add Cobertura-style XML reports',
-    long_description=open('README').read(),
+    long_description=open('README.markdown').read(),
     author='Chris Heisel',
     author_email='chris@heisel.org',
     url='http://github.com/cmheisel/nose-xcover/',
