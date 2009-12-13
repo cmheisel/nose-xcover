@@ -13,7 +13,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    install_requires=['nose'],
+    install_requires=['nose', 'coverage'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
