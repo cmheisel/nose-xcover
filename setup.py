@@ -1,11 +1,15 @@
 from setuptools import setup, find_packages
 
+try:
+	desc = file.read(open('README.markdown'))
+except StandardError:
+	desc = 'see README.markdown'
 
 setup(
     name='nosexcover',
-    version='1.0',
+    version='1.0.2',
     description='Extends nose.plugins.cover to add Cobertura-style XML reports',
-    long_description=open('README.markdown').read(),
+    long_description=desc,
     author='Chris Heisel',
     author_email='chris@heisel.org',
     url='http://github.com/cmheisel/nose-xcover/',
@@ -13,7 +17,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    install_requires=['nose', 'coverage'],
+    install_requires=['nose', 'coverage==3.2'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
