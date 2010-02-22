@@ -3,4 +3,5 @@
 nosexcover.egg-info
 coverage.xml
 nosetests.xml
-ve
+dist
+.DS_Store
