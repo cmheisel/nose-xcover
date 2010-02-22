@@ -5,6 +5,6 @@ A companion to the built-in nose.plugins.cover, this plugin will write out an XM
 It will honor all the options you pass to the Nose coverage plugin, especially --cover-package.
 
 ## Usage
-    \#nosetests --with-coverage {{ coverage options }} --with-xcoverage
+    #nosetests --with-coverage {{ coverage options }} --with-xcoverage
     nosetests --with-coverage --cover-package=myapp --cover-tests --with-xcoverage
 
