@@ -17,7 +17,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    install_requires=['nose', 'coverage<=3.3'],
+    install_requires=['nose', 'coverage<3.4'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
