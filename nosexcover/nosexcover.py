@@ -18,6 +18,17 @@ class XCoverage(cover.Coverage):
         Add options to command line.
         """
         Plugin.options(self, parser, env)
+        parser.add_option('--xcoverage-file', action='store',
+                          default=env.get('NOSE_XCOVER_FILE', 'coverage.xml'),
+                          dest='xcoverage_file',
+                          metavar="FILE",
+                          help='Path to xml file to store the coverage report in. '
+                          'Default is coverage.xml in the working directory. '
+                          '[NOSE_XCOVERAGE_FILE]')
+        
+    def configure(self, options, config):
+        super(XCoverage, self).configure(options, config)
+        self.xcoverageFile = options.xcoverage_file
 
     def report(self, stream):
         """
@@ -30,4 +41,4 @@ class XCoverage(cover.Coverage):
                     if self.wantModuleCoverage(name, module) ]
         log.debug("Coverage report will cover modules: %s", modules)
         morfs = [ m.__file__ for m in modules if hasattr(m, '__file__') ]
-        coverage._the_coverage.xml_report(morfs, outfile='coverage.xml')
+        coverage._the_coverage.xml_report(morfs, outfile=self.xcoverageFile)
