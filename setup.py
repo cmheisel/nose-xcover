@@ -7,7 +7,7 @@ except StandardError:
 
 setup(
     name='nosexcover',
-    version='1.0.5',
+    version='1.0.6',
     description='Extends nose.plugins.cover to add Cobertura-style XML reports',
     long_description=desc,
     author='Chris Heisel',

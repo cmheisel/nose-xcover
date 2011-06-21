@@ -35,11 +35,15 @@ class XCoverage(cover.Coverage):
         """
         Output code coverage report.
         """
-        import coverage
-        coverage.stop()
+        super(XCoverage, self).report(stream)
+        if not hasattr(self, 'coverInstance'):
+            # nose coverage plugin 1.0 and earlier
+            import coverage
+            self.coverInstance = coverage._the_coverage
+
         modules = [module
                     for name, module in sys.modules.items()
                     if self.wantModuleCoverage(name, module)]
         log.debug("Coverage report will cover modules: %s", modules)
         morfs = [m.__file__ for m in modules if hasattr(m, '__file__')]
-        coverage._the_coverage.xml_report(morfs, outfile=self.xcoverageFile)
+        self.coverInstance.xml_report(morfs, outfile=self.xcoverageFile)
