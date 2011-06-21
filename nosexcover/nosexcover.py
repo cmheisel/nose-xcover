@@ -28,6 +28,11 @@ class XCoverage(cover.Coverage):
                           '[NOSE_XCOVERAGE_FILE]')
 
     def configure(self, options, config):
+        if options.enable_plugin_coverage:
+            log.error(
+                "You can not use both --with-xcover and --with-coverage")
+            raise TypeError
+
         super(XCoverage, self).configure(options, config)
         self.xcoverageFile = options.xcoverage_file
 
