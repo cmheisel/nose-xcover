@@ -3,13 +3,13 @@ nose-xmlcover
 
 A companion to the built-in nose.plugins.cover, this plugin will write out an XML coverage report to a file named coverage.xml.
 
-It will honor all the options you pass to the "Nose coverage plugin":http://somethingaboutorange.com/mrl/projects/nose/0.11.1/plugins/cover.html, especially --cover-package.
+It will honor all the options you pass to the `Nose coverage plugin <http://somethingaboutorange.com/mrl/projects/nose/1.0.0/plugins/cover.html>`_, especially --cover-package.
 
 Usage
 ------
 You can not use both --with-xcover and --with-coverage.  Using --with-xcover implies --with-coverage
 
-As of nose-xcover 1.0.6 --with-xcoverage provides all the functionality of the built-in coverage plugin in addition to Cobertura-style output:
+As of nose-xcover 1.0.6 --with-xcoverage provides all the functionality of the built-in coverage plugin in addition to Cobertura-style output::
 
     #nosetests --with-xcoverage {{ coverage options }}
     nosetests --with-xcoverage --cover-package=myapp --cover-tests
