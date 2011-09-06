@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 try:
-	desc = file.read(open('README.rst'))
+    desc = file.read(open('README.rst'))
 except StandardError:
-	desc = 'see README.markdown'
+    desc = 'see README.rst'
 
 setup(
     name='nosexcover',
-    version='1.0.6.1',
+    version='1.0.7',
     description='Extends nose.plugins.cover to add Cobertura-style XML reports',
     long_description=desc,
     author='Chris Heisel',
@@ -26,8 +26,7 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    entry_points = {
-        'nose.plugins': [ 'xcover = nosexcover:XCoverage' ]
+    entry_points={
+        'nose.plugins': ['xcover = nosexcover:XCoverage']
     },
 )
-
