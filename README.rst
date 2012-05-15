@@ -9,9 +9,12 @@ Usage
 ------
 You can not use both --with-xcover and --with-coverage.  Using --with-xcover implies --with-coverage
 
+If you want to change the name of the output file you can use --xcoverage-file=FILE (--cover-xml-file from coverage won't work)
+
 As of nose-xcover 1.0.6 --with-xcoverage provides all the functionality of the built-in coverage plugin in addition to Cobertura-style output::
 
     #nosetests --with-xcoverage {{ coverage options }}
     nosetests --with-xcoverage --cover-package=myapp --cover-tests
+
 
 
