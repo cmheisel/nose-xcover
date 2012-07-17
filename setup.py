@@ -27,6 +27,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     entry_points={
-        'nose.plugins': ['xcover = nosexcover:XCoverage']
+        'nose.plugins': ['xcover = nosexcover.nosexcover:XCoverage']
     },
 )
