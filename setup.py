@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 try:
-    desc = file.read(open('README.rst'))
-except StandardError:
+    desc = open('README.rst').read()
+except:
     desc = 'see README.rst'
 
 setup(
