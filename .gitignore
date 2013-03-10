@@ -5,3 +5,4 @@ coverage.xml
 nosetests.xml
 dist
 .DS_Store
+.tox
