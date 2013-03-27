@@ -46,7 +46,7 @@ class XCoverage(cover.Coverage):
         super(XCoverage, self).configure(options, config)
         self.xcoverageFile = options.xcoverage_file
         
-        to_stdout = options.xcoverage_to_stdout
+        to_stdout = str(options.xcoverage_to_stdout)
         self.xcoverageToStdout = False if '0' in to_stdout or 'false' in to_stdout.lower() else True
 
     def report(self, stream):
