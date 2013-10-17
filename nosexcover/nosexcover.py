@@ -43,7 +43,11 @@ class XCoverage(cover.Coverage):
                 """You can not use both --with-xcover and --with-coverage. Using --with-xcover implies --with-coverage""")
             raise TypeError
 
+        cover.old_log = cover.log
+        cover.log = log
         super(XCoverage, self).configure(options, config)
+        cover.log = cover.old_log
+
         self.xcoverageFile = options.xcoverage_file
         
         to_stdout = str(options.xcoverage_to_stdout)
