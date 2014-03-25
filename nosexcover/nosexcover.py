@@ -4,7 +4,12 @@ arguments. A Cobertura-style XML file, honoring the options you pass to
 
 import logging
 import sys
-import StringIO
+try:
+    # Python 2
+    import StringIO
+except ImportError:
+    # Python 3
+    from io import StringIO
 
 from nose.plugins import cover, Plugin
 log = logging.getLogger('nose.plugins.xcover')
