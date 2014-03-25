@@ -1,1 +1,1 @@
-from nosexcover import *
+from .nosexcover import XCoverage

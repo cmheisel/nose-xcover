@@ -1,2 +1,2 @@
 def test_sanity():
-    assert True
+    from nosexcover import XCoverage
