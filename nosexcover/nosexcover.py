@@ -6,7 +6,7 @@ import logging
 import sys
 try:
     # Python 2
-    import StringIO
+    from StringIO import StringIO
 except ImportError:
     # Python 3
     from io import StringIO
@@ -64,7 +64,7 @@ class XCoverage(cover.Coverage):
         """
         if not self.xcoverageToStdout:
             # This will create a false stream where output will be ignored
-            stream = StringIO.StringIO()
+            stream = StringIO()
             
         super(XCoverage, self).report(stream)
         if not hasattr(self, 'coverInstance'):
