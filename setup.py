@@ -7,7 +7,7 @@ except:
 
 setup(
     name='nosexcover',
-    version='1.0.10',
+    version='1.0.11',
     description='Extends nose.plugins.cover to add Cobertura-style XML reports',
     long_description=desc,
     author='Chris Heisel',
